@@ -1,33 +1,40 @@
 #include<stdio.h>
 int main()
 {
-    int arr[20], i, j, k, size;
+    int i, j, k,exists,key, size;
     scanf("%d", &size);
+    int arr[size],arr2[size];
     for (i = 0; i < size; i++)
     {
         scanf("%d", &arr[i]);
     }
-    for (i = 0; i < size; i++)
-    {
-        for (j = i + 1; j < size;)
-        {
-            if (arr[j] == arr[i])
-            {
-                for (k = j; k < size; k++)
-                {
-                    arr[k] = arr[k + 1];
-                }
-                size--;
-            }
-            else
-            {
-                j++;
-            }
-        }
-    }
     
-    for (i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+	//logic 
+	for(i=0,j=0;i<size;i++)
+	{
+		key =arr[i];exists=0;
+		for(k=0;k<i;k++)
+		{
+			if(arr2[k]==key)
+			{
+				exists=1;
+			}
+		}
+		
+		if(!exists)
+		{
+			arr2[j]=arr[i];
+			j++;
+			
+		}
+		
+	}
+     
+     
+     
+    
+    for (i = 0; i < j; i++) {
+        printf("%d ", arr2[i]);
     }
     
     return 0;

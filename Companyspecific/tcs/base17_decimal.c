@@ -54,7 +54,7 @@ int main()
 		{
 			digit=hex[i]-48;
 	    }
-        dec= dec+ (digit)*pow((double)17,(double)cnt);
+        dec= dec+ (digit)*pow((int)17,(int)cnt);
         cnt++;
     }
  

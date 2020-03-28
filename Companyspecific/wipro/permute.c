@@ -1,3 +1,4 @@
+#include<stdio.h>
 void swap(char *x, char *y) 
 { 
 
@@ -47,4 +48,15 @@ void permute(char *a, int l, int r)
        } 
 
    } 
+}
+
+int main()
+{
+	char* a[20];
+	int i,l,r;
+	scanf("%[^\n]s",a);
+	for(i=0;a[i];i++);
+	l=0,r=i;
+	permute(char *a, int l, int r); 
+	return 0;
 }

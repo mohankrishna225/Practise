@@ -1,9 +1,5 @@
 #include<stdio.h>
-int main()
-{
-
 // Counts distinct elements in window of size k
-
 
 int countWindowDistinct(int win[], int k)
 
@@ -42,20 +38,30 @@ int countWindowDistinct(int win[], int k)
 
 // Counts distinct elements in all windows of size k
 
-void countDistinct(int arr[], int n, int k)
+int countDistinct(int arr[], int n, int k)
 
 {
 
     // Traverse through every window
     int i;
-    for (i=0; i<=n-k; i++)
+    for (i=0; i<n-k; i++)
 
-       printf("%d",countWindowDistinct(arr+i, k));
+       printf("%d\n",countWindowDistinct(arr+i, k));
 
 }
 
-
-
+int main()
+{
+    
+	int n,k,i;
+	scanf("%d",&n);
+	int arr[n];
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	scanf("%d",&k);
+    countDistinct(arr, n, k);
 	return 0;
 	
 }

@@ -15,7 +15,7 @@ int main()
 }
 
 //1000   
-
+//5 percent interest rate..
 //1050.00
 //1102.50
 //1157.62

@@ -15,7 +15,7 @@ int main()
     /* Calculate compound interest */
     CI = principle* (pow((1 + (rate / 100)), time));
     
-    discount = (SI*2)/100;
+    discount = SI*(0.02);
    
     printf("%.2f\n",SI);
     printf("%.2f\n", CI);

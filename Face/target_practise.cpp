@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+  int num,n,count,sum=0;
+  cin>>num;
+  for(count=0;sum<num;count++)
+  {
+	cin>>n;
+    sum=sum+n;
+  }
+  cout<<"The number of turns is "<<count;
+  return 0;
+}

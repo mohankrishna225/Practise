@@ -1,0 +1,9 @@
+
+Operator	precedence
+!	High
+&&	Medium
+||	Low
+A || B && C	means	A || (B && C)
+A && B || C && D	means	(A && B) || (C && D)
+A && B && C || D	means	((A && B) && C) || D
+!A && B || C	means	((!A) && B) || C

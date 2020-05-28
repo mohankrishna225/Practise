@@ -1,0 +1,284 @@
+input : mno 
+
+fun(char a)
+	if(a[0] EQUALS NULL)
+			Return
+	end if
+	fun(a+1)
+	fun(a+1)
+	print(a[0])
+end function
+
+output : oonoonm 
+
+--------------------------------------
+
+Integer x,y,z
+Set x=24,y=8
+x=x/y    // 24/8=3
+z=y<<x   // 8<<3 // 00001000<<3 ==> 01000000 ==>64
+print z  //64
+
+output : 64
+
+--------------------------------------
+
+Integer a,b,c,d
+Set a=14,b=15,c=16
+if(a>6)  // 14>6 : True
+	b=c-a   // b = 16-14 = 2
+	if(a>c)  // 14 > 16 : False
+		d=b+c
+	else
+		d=b-c  // d = 2-16 = -14 
+else
+	d=a+b+c-3   
+print d
+
+output : -14
+
+--------------------------------------
+
+Integer a,b,c
+Set b=10
+for(each a from 1 to 4)
+	b=b+a  // 10+1 // 11 +2 // 13 +3 // 16 +4 // 20 
+end for
+c=b/5  // c=20/5 =4
+print c
+
+output : 4
+
+---------------------------------------
+
+input : 4
+
+int sum(int sum) {     // 4
+	if(num is not equal to 0)  // True
+		return num + num * sum(num-1)  // 4 + 4 * sum(3) // 3 + 3 *sum(2) // 2 +2 * sum(1) // 1 + 1 * sum(0) 
+	else
+		return num
+}
+
+output : 64 
+
+--------------------------------------
+
+input = a=2,b=4 ?
+
+int fun(int a,int b)  //(2,4) // (8,2) // (12,0)  //
+	int n = 0   
+	if(b<1)    // 4<1 // 2<1 // 0<1
+		return n   // 0 
+	else
+		return fun(a+b+2,b-2)   // (8,2) // (12,0)
+
+output : 0
+
+--------------------------------------
+
+Integer i,j,sum
+Set sum=0
+for(i=0 to 5)  // i 0 1 2 3 4 5
+	for(j=0 to 2)  // j 0 1 2 
+		sum=i*j // multiplying i with each j value 
+	End for
+End for
+print sum
+
+output : 10 i.e 5*2
+
+--------------------------------------
+
+input : 2
+ 
+Integer fun(Integer n) // 2 // 3 //
+	if(n is EQUAL TO 4) 
+		return n // 4 
+	else 
+		 return 2 * fun(n+1) // 2 * fun(3) >>  // 4
+	end if
+
+output :  16
+
+--------------------------------------
+
+input : a=5,b=2?
+
+Integer fun(Integer a, Integer b) //(5,2) // (4,8) // (3,0) // (2,6) // (1,-2) // (0,4) //
+	if(a EQUALS 0) 
+		return b //4
+	else
+		return fun(a-1,2*a-b)  // (4,8) // (3,0) // (2,6) // (1,-2) // (0,4)
+	end if
+End function fun()
+
+output : 4
+
+---------------------------------------
+
+How many times print will execute ?
+
+integer a,b,c
+Set a=8,b=10,c=6
+if(a>c AND (b+c)>a) // 8>6 AND 16>8
+	print a      // 1 time //
+end if
+if(c>b OR (a+c>b)) // 6>10 OR 14>10
+	print b  // 2 time
+end if
+if((b+c) MOD a EQUALS 0)  // 16 MOD 8 ==0 True
+	print c  // 3 Time
+end if
+
+output : 3
+
+----------------------------------------
+
+Integer a=2,b=3
+Integer result=1
+while(b NOT EQUALS 0) // 3 !=0  // 2!=0 // 1!=0 //0!=0 False return 1
+	result = result *a // 2 2 // 4 1 // 8 0  
+	b=b-1;
+end while
+if(result>5)
+	a=a-1
+else
+	a=a+1
+end if
+print result,a
+
+output : 8 1
+
+-----------------------------------------
+
+Char text = "TESTSTRING"
+Integer a,c
+char ch='T'
+c=0
+for(each a from 0 to length of text)
+	if(text[a]==ch)
+		c=c+1
+	end if
+end for
+if(c>0)
+	print c
+else
+	print "0"
+
+output : 3	
+
+------------------------------------------
+
+Input : 2
+
+Integer fun(Integer n) // 2 // 3 // 4
+	if(n IS EQUAL TO 4) 
+		return n // 4
+	else
+		return 2* fun(n+1) // 2 *fun(3) // 2 *fun(4) 
+	end if
+
+output : 16 
+
+------------------------------------------
+
+Input : 1
+
+void reverse(int n) //1  //2 //3 //4 // 5 //6
+	if(n greater than 5) 
+		exit
+	print n // 1 2 3 4 5
+		return reverse(Increment n by 1) // 2 //3 //4 // 5 //6 
+End function reverse()
+
+Output :  1 2 3 4 5
+
+--------------------------------------------
+
+Input x=3,y=6
+
+int fun(int x, int y) // (3,6) // (2,9) // (1,11) //(0,12)
+	if(x==0)
+		return y //12
+	else
+	 	return fun1(x-1,x+y) // (2,9) // (1,11) // (0,12)
+End function fun1()
+
+output : 12
+
+---------------------------------------------
+
+Integer num,temp,no,sum
+Set num=103,sum=0
+while(num greater than 0)
+	no= num mod 10 // 103%10 = 3 // 10%10=0 / 1%10=1
+	sum =sum + no * 2 // sum= 6 // sum 6 // sum 8
+	num=num/10; // num =103/10=10 // 10/10=1 // 1/10=0
+End while
+print sum
+
+Output : 8
+	
+----------------------------------------------
+
+Integer a,b,count
+Set a=2,count=0,b=1
+while(b<121) //1<121 // 3<121 // 7<121// 15 <121//31<121//63<121//
+	b=a*b // 2 // 6 // 14 // 30 //62//126
+	count= count+1 / 1 / 2/ /3 /4 //5// 6
+	b=b+1 //3 // 7 //15 // 31 //63 //127
+end while
+Print count
+
+Output : 6
+
+-----------------------------------------------
+
+Input : 10,6
+
+Integer func(integer a,integer b) //(10,6) // (6,4) //(4,2) //
+	Integer temp
+	while(b) //6 //4 //2
+		temp = a MOD b // 4 // 2 // 0
+		a=b // 6 // 4 // 2
+		b=temp //4 // 2 // 0
+	end while 
+return a
+}
+
+Output : 2
+
+-----------------------------------------------
+
+Integer n,beg,end
+Set beg=5,end=7,sum=0 
+if(beg>end)  // 5>7 // 
+	print sum+1  //  //
+else
+	for(n=end;n>=beg;n=n-1) // n=7;n>=5;n-- //n=5//n=3
+		sum=sum+n // 7 // 12
+		n=n-1 // 6 // 4
+	End for loop
+Print n
+
+Output :  3
+
+------------------------------------------------
+
+Input : 243
+
+Integer abc(int n) //243 //24 //2 //0
+	Integer a,b  
+	if(n>0) // 243>0 //24>0 //2>0
+		a=n mod 10 //243%10=3 // 24%10 =4 // 2%10=2
+		b=b+a // 3 // 7 // 9
+		abc(n/10) //24// 2 // 0
+	else
+		return b // 9
+End Function abc()
+
+Output : 9
+
+-------------------------------------------------
+

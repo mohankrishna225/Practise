@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 int power(int base,int a)
 {
@@ -94,8 +95,40 @@ void leap_year(int year)
 	}
 }
 
+void Armstrong(int number)
+{
+
+int num, originalNum, remainder, n = 0;
+   float result = 0.0;
+
+   num = number;
+
+   originalNum = num;
+
+   // store the number of digits of num in n
+   for (originalNum = num; originalNum != 0; ++n) {
+       originalNum /= 10;
+   }
+
+   for (originalNum = num; originalNum != 0; originalNum /= 10) {
+       remainder = originalNum % 10;
+
+      // store the sum of the power of individual digits in result
+      result += pow(remainder, n);
+   }
+
+   // if num is equal to result, the number is an Armstrong number
+   if ((int)result == num)
+    cout<<num<<" is an Armstrong number."<<endl;
+   else
+    cout<<num<<" is not an Armstrong number"<<endl;
+
+}
+
+
 int main()
 {
+ Armstrong(153);	
  cout<<factorial(5)<<endl; 
  factorial_series(10);
  cout<<fibonacci(9)<<endl;

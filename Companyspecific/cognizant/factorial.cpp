@@ -126,6 +126,7 @@ int num, originalNum, remainder, n = 0;
 }
 
 
+
 int main()
 {
  Armstrong(153);	
